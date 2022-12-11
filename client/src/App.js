@@ -1,3 +1,5 @@
+// TODO: Create an Apollo Provider to make every request work with the Apollo Server
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SearchBooks from './pages/SearchBooks';
@@ -10,15 +12,15 @@ function App() {
       <>
         <Navbar />
         <Routes>
-          <Route 
-            path='/' 
-            element={<SearchBooks />} 
+          <Route
+            path='/'
+            element={<SearchBooks />}
           />
-          <Route 
-            path='/saved' 
-            element={<SavedBooks />} 
+          <Route
+            path='/saved'
+            element={<SavedBooks />}
           />
-          <Route 
+          <Route
             path='*'
             element={<h1 className='display-2'>Wrong page!</h1>}
           />
