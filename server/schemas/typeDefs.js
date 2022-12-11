@@ -26,6 +26,15 @@ type Auth {
     user: User
 }
 
+input savedBook {
+    description: String
+    title: String
+    bookId: ID
+    image: String
+    link: String
+    authors: [String]
+}
+
 type Query {
     me: User
 }
@@ -33,11 +42,7 @@ type Query {
 type Mutation {
     login(email: String, password: String): Auth
     addUser(username: String, email: String, password: String): Auth
-    `
-    // TODO: Add saveBook, which accepts a book author's array, description, title, bookId, image, AND link as parameters, returning a User type
-    // "Look into creating what's knownn as an input type to handle all these parameters!"
-    // PS not sure if this concatenation will break things, so RM this comment when done
-    + `
+    saveBook(input: savedBook): User
     removeBook(bookId: String): User
 }`;
 
