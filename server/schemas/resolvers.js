@@ -1,6 +1,3 @@
-// TODO: Define the query and mutation functionality to work with the Mongoose models.
-// Hint: Use the functionality in the user-controller.js as a guide
-
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Book } = require('../models');
 const { signToken } = require('../utils/auth')
@@ -43,11 +40,11 @@ const resolvers = {
             const token = signToken(user);
             return { token, user }
         },
-        saveBook: async (parent, { book }, context) => {
+        saveBook: async (parent, args, context) => {
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $addToSet: { savedBooks: book } },
+                    { $addToSet: { savedBooks: args.input } },
                     { new: true }
                 )
                 return updatedUser;
