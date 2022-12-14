@@ -45,7 +45,7 @@ export const SAVE_BOOK = gql`
             username
             email
             savedBooks {
-                # _id
+                bookId
                 authors
                 bookId
                 image
@@ -53,8 +53,6 @@ export const SAVE_BOOK = gql`
                 title
                 description
             }
-            bookCount
-            token
         }
     }
 `;
