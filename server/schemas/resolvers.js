@@ -11,7 +11,7 @@ const resolvers = {
     Query: {
         me: async (parent, args, context) => {
             if (context.user) {
-                const userData = await User.findOne({})
+                const userData = await User.findOne({ _id: context.user._id })
                     .select('-__v -password')
                     .populate('books')
 
@@ -29,7 +29,7 @@ const resolvers = {
             return { token, user }
         },
         login: async (parent, { email, password }) => {
-            const user = await Profile.findOne({ email });
+            const user = await User.findOne({ email });
 
             if (!user) {
                 throw new AuthenticationError('No user with this email found');
