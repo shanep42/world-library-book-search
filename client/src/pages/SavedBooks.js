@@ -12,7 +12,7 @@ const SavedBooks = () => {
   const [removeBook] = useMutation(REMOVE_BOOK);
 
   const userData = data?.me || {};
-  console.log('USERDATA RETURNED BY GET_ME: ', userData)
+  // console.log('USERDATA RETURNED BY GET_ME: ', userData)
 
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
