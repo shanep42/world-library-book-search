@@ -23,7 +23,8 @@ npm run develop
 from the root directory (where you should find this README!)
 
 ### Usage
-To look for a needed book, save it in your memory and use it later if needed or you delete the list that you have created after you sign in to get your info after its been saved in the local storage
+The app is most easily used online in its Heroku Deployment, [here](https://protected-springs-18395.herokuapp.com/saved).
+You can search right away, but saving and removing your saved books will naturally require you to log in.
 
 
 ### Screenshots
