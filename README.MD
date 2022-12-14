@@ -23,7 +23,7 @@ npm run develop
 from the root directory (where you should find this README!)
 
 ### Usage
-The app is most easily used online in its Heroku Deployment, [here](https://protected-springs-18395.herokuapp.com/saved).
+The app is most easily used online in its Heroku Deployment, [here](https://protected-springs-18395.herokuapp.com).
 You can search right away, but saving and removing your saved books will naturally require you to log in.
 
 
